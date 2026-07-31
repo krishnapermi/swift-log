@@ -63,7 +63,7 @@ public struct StreamLogHandler: LogHandler {
 
     /// Creates a stream log handler that directs its output to STDERR using the metadata provider you provide.
     public static func standardError(label: String, metadataProvider: Logger.MetadataProvider?) -> StreamLogHandler {
-        StreamLogHandler(label: label, stream: StdioOutputStream.st$err, metadataProvider: metadataProvider)
+        StreamLogHandler(label: label, stream: StdioOutputStream.stderr, metadataProvider: metadataProvider)
     }
 
     private let stream: any TextOutputStream & Sendable
